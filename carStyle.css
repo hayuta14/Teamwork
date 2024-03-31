@@ -108,7 +108,7 @@ button {
 
 /*=============== THEME ===============*/
 /*========== Variables Dark theme ==========*/
-body.dark-theme {
+/* body.dark-theme {
   --first-color: hsl(31, 76%, 74%);
   --button-color: hsl(0, 0%, 24%);
   --button-color-alt: hsl(0, 0%, 28%);
@@ -117,10 +117,10 @@ body.dark-theme {
   --body-color: hsl(0, 0%, 12%);
   --container-color: hsl(0, 0%, 16%);
   --border-color: hsl(0, 0%, 20%);
-}
+} */
 
 /*========== Button Dark/Light ==========*/
-.change-theme {
+/* .change-theme {
   color: var(--title-color);
   font-size: 1.25rem;
   cursor: pointer;
@@ -130,7 +130,7 @@ body.dark-theme {
     Color changes in some parts of 
     the website, in dark theme 
 ==========*/
-.dark-theme .change-theme,
+/* .dark-theme .change-theme,
 .dark-theme .nav__toggle,
 .dark-theme .nav__shop,
 .dark-theme .button--gray {
@@ -149,7 +149,7 @@ body.dark-theme {
 
 .dark-theme::-webkit-scrollbar {
   background: hsl(0, 0%, 30%);
-}
+} */ 
 
 /*=============== REUSABLE CSS CLASSES ===============*/
 .container {
@@ -191,7 +191,7 @@ body.dark-theme {
   background-color: var(--first-color);
 }
 /*=============== BUTTONS ===============*/
-.button {
+/* .button {
     display: inline-block;
     background-color: var(--button-color);
     color: #FFF;
@@ -215,7 +215,7 @@ body.dark-theme {
   
   .button--small {
     padding: 1rem 1.5rem;
-  }
+  } */
   /*=============== CARSTYLE ===============*/
   .carStyle__container {
     padding-top: 10px;
@@ -302,10 +302,66 @@ body.dark-theme {
         bottom: 0;
         border-radius: 10px 0 10px 0;
         cursor: pointer;
+        transition: 0.3s;
   }
   .carStyle__button i{
     font-size: 12.5px;
   }
+  .carStyle__button:hover {
+    background-color: #65bf29;
+    color: #fff;
+  }
   .carStyle__card:hover .carStyle__img {
     transform: translateX(-3px);
+  }
+  .section__below {
+    width: 100%;
+    margin-top: 40px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+  .section__below-container {
+    display: flex;
+    justify-content: center;
+    background-color: var(--container-color);
+    width: 120px;
+    margin: 20px auto;
+    height: 40px;
+    border-radius: 10px;
+    opacity: 0.3;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .section__below-but {
+    transition: 0.3s;
+  }
+  .section__below-container:hover {
+    animation: slide 0.4s;
+    background-color: #65bf29;
+    opacity: 1;
+  }
+  .section__below-container:hover .section__below-but {
+    background-color: #65bf29;
+  }
+  .section__below-but {
+    background-color: var(--container-color);
+    display: flex;
+    color: var(--text-color);
+    font-size: var(--normal-font-size);
+    border: none;
+    outline: none;
+    width: 50px;
+    height: 40px;
+    align-items: center;
+  }
+  .icon__below {
+    margin-left: 3px;
+  }
+  @keyframes slide{
+    from{
+      width: 0;
+    }
+    to{
+      width: 120px;
+    }
   }
